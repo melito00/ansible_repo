@@ -1,0 +1,9 @@
+---
+# tasks file for test-role-1
+- name: greeting
+  shell: echo "Hello,  {{ greeting }}"
+  register: ret
+
+- name: return_greeting
+  debug: msg="{{ ret.stdout }}"
+  
